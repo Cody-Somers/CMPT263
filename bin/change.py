@@ -4,7 +4,7 @@ def main():
     # Check that the input from the user is a valid positive integer number.
     try:
         #n = int(input("Enter a number: "))
-        n = 24 # Testing purposes. TODO: REMOVE THIS LINE
+        n = 15 # Testing purposes. TODO: REMOVE THIS LINE
     except:
         print("Invalid Input")
         return
@@ -74,24 +74,55 @@ def main():
         n = n - x * c1  # Subtract the total amount by the number of 1 cent coins that fit
         if n != 0:
             print("Error with array initialization")
-    print(output) # First combination
-    if output[4] != 0:
-        for j in range(output[4]):
-            output[4] = output[4] - 1
-            output[5] = output[5] + 2  # add two since 5+5
-            temp = output.copy()  # Used to reset the array back
+    print(output)  # First combination
+    if output[3] != 0:
+        for k in range(output[3]):
+            output[3] = output[3] - 1
+            output[4] = output[4] + 2  # add two since 25 = 10+10 + (5)
+            output[5] = output[5] + 1  # add one since 25 = (10+10) + 5
+            temp2 = output.copy()  # Used to reset the array back
             print(output)
             for i in range(output[5]):
                 output[5] = output[5] - 1
                 output[6] = output[6] + 5  # add five since 1+1+1+1+1
                 print(output)
-            output = temp.copy()  # Return the five cent coins from their 1 cent current state
+            output = temp2.copy()
+            for j in range(output[4]):
+                output[4] = output[4] - 1
+                output[5] = output[5] + 2  # add two since 5+5
+                temp = output.copy()  # Used to reset the array back
+                print(output)
+                for i in range(output[5]):
+                    output[5] = output[5] - 1
+                    output[6] = output[6] + 5  # add five since 1+1+1+1+1
+                    print(output)
+                output = temp.copy()  # Return the five cent coins from their 1 cent current state
+            output = temp2.copy()  # Return the five cent coins from their 1 cent current state
+    elif output[4] != 0:
+        tenCents(output)
     else:
-        for i in range(output[5]):
-            output[5] = output[5] - 1
-            output[6] = output[6] + 5  # add five since 1+1+1+1+1
-            print(output)
+        fiveCents(output)
     print("Test")
     return
+
+
+def fiveCents(output):
+    for i in range(output[5]):
+        output[5] = output[5] - 1
+        output[6] = output[6] + 5  # add five since 1+1+1+1+1
+        print(output)
+
+def tenCents(output):
+    temp = output.copy()  # Used to reset the array back
+    fiveCents(output)
+    output = temp.copy()  # Return the five cent coins from their 1 cent current state
+    for j in range(output[4]):
+        output[4] = output[4] - 1
+        output[5] = output[5] + 2  # add two since 5+5
+        print(output)
+        temp = output.copy()  # Used to reset the array back
+        fiveCents(output)
+        output = temp.copy()  # Return the five cent coins from their 1 cent current state
+
 
 main()
