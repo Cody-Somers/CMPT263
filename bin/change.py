@@ -3,7 +3,8 @@ import math
 def main():
     # Check that the input from the user is a valid positive integer number.
     try:
-        n = int(input("Enter a number: "))
+        #n = int(input("Enter a number: "))
+        n = 24 # Testing purposes. TODO: REMOVE THIS LINE
     except:
         print("Invalid Input")
         return
@@ -73,8 +74,24 @@ def main():
         n = n - x * c1  # Subtract the total amount by the number of 1 cent coins that fit
         if n != 0:
             print("Error with array initialization")
+    print(output) # First combination
+    if output[4] != 0:
+        for j in range(output[4]):
+            output[4] = output[4] - 1
+            output[5] = output[5] + 2  # add two since 5+5
+            temp = output.copy()  # Used to reset the array back
+            print(output)
+            for i in range(output[5]):
+                output[5] = output[5] - 1
+                output[6] = output[6] + 5  # add five since 1+1+1+1+1
+                print(output)
+            output = temp.copy()  # Return the five cent coins from their 1 cent current state
+    else:
+        for i in range(output[5]):
+            output[5] = output[5] - 1
+            output[6] = output[6] + 5  # add five since 1+1+1+1+1
+            print(output)
     print("Test")
-    print(output)
     return
 
 main()
