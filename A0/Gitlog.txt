@@ -1,0 +1,64 @@
+commit 88c2606ad3de697e57e1d7e40060fa954c158d14 (HEAD -> main, origin/main)
+Author: Somers <cas003@usask.ca>
+Date:   Sun Jul 7 21:37:50 2024 -0600
+
+    Added name to project
+
+commit b401c5fbea50b0c12355a04de1da4f2791ec5633
+Author: Somers <cas003@usask.ca>
+Date:   Sun Jul 7 21:34:20 2024 -0600
+
+    Project Complete
+
+    All docstrings and comments have been added. It is not capable of reading/writing to a text file as the given project example is simply in the command line.
+    All test cases have been run and manually checked. No bugs found.
+
+commit 6336beb591fc991a28e2835979a9447d8893c8f7
+Author: Somers <cas003@usask.ca>
+Date:   Sun Jul 7 16:50:45 2024 -0600
+
+    Majority of Project Finished
+
+    The functions work for all denominations of coins
+    The next step is to finish the comments and refine the code to output to a text file, read in from a text file, etc.
+commit 5dba7af732490ed0d47aea681d0c96fd28d60457
+Author: Somers <cas003@usask.ca>
+Date:   Sun Jul 7 16:34:03 2024 -0600
+
+    Started creating functions to solve each denomination
+
+    Was repeating code frequently, so created new functions to reduce that
+    Still have only the 10 and 5 cent coins complete
+
+commit 6dac4dcc3a80f6b85d9af7071c97e2d73486c7bc
+Author: Somers <cas003@usask.ca>
+Date:   Sun Jul 7 16:04:23 2024 -0600
+
+    Completed function for up to 10 cent pieces
+
+    Next step is to expand for the remainder of the coins
+
+commit a6377fa906ab3580f0f6728eb28ccba6efd5baca
+Author: Somers <cas003@usask.ca>
+Date:   Sun Jul 7 15:35:17 2024 -0600
+
+    Completed array initialization of input
+
+    The system can now take in a number from the user and create the first set of coins that represents the fewest possible coins needed
+
+commit 0fce32a4aa3ef53dafde6613e5fd3d53882c4585
+Author: Somers <cas003@usask.ca>
+Date:   Sun Jul 7 14:48:07 2024 -0600
+
+    Started pseudocode and the basis for checking inputs
+
+    Error with interpreter. Can not run currently to test functionality.
+
+commit 678f858ec077deb62fc59bc7373e1fc1bc51aa8f
+Author: Somers <cas003@usask.ca>
+Date:   Sun Jul 7 14:09:56 2024 -0600
+
+    Created Test Cases
+    - 10 in total
+    Created Empty Python File
+    - Future coding occurs here
