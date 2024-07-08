@@ -1,3 +1,9 @@
+"""
+Project by Cody Somers, cas003
+CMPT 263 Assignment 0
+July 8, 2024
+"""
+
 import math
 
 
